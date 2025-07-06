@@ -1,0 +1,22 @@
+import os, time
+
+while True:
+  f = open("HighScorefile.txt", "a+")
+  print("High Score Table⭐")
+  print()
+  initials = input("Your initials: ")
+  f.write(f"{initials}\t:")
+  
+  score = input("Your score: ")
+  f.write(f"{score}\n")
+  print()
+  again = input("Add another? y/n?: ").strip().lower()
+  if again == "y":
+    time.sleep(1)
+    os.system("clear")
+    continue
+  else:
+    f.close()
+    break
+
+  
